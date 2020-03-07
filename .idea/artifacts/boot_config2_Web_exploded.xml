@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="boot-config2:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/boot_config2_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="boot-config2/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="boot-config2" />
+          <element id="module-output" name="boot-config" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="boot-config/web/Web" />
+    </root>
+  </artifact>
+</component>

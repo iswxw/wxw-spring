@@ -1,0 +1,35 @@
+server:
+  port: 8082
+
+person:
+  username: 魏永杰
+  age: 18
+  gender: true
+  birth: 2020/03/07
+  maps: {k1: v1,k2: 12}
+  lists:
+    - 郭婷
+    - 连李文
+    - 高小青
+  dog:
+    dogName: 哮天犬
+    dogAge: 12
+# 默认第一个文档块 为激活的环境
+#spring:
+#  profiles:
+#    active: prod
+
+
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
+
+
+---
+
+server:
+  port: 8084
+spring:
+  profiles: prod  #指定属于哪个环境
