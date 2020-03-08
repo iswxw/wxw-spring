@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/boot-helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/boot-config/pom.xml" />
         <option value="$PROJECT_DIR$/boot-config2/pom.xml" />
+        <option value="$PROJECT_DIR$/boot-logging/pom.xml" />
       </list>
     </option>
   </component>

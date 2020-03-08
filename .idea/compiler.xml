@@ -10,6 +10,7 @@
         <module name="Itcast-springboot" />
         <module name="boot-config" />
         <module name="boot-config2" />
+        <module name="boot-logging" />
         <module name="boot-helloworld" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="boot-config" options="-parameters" />
       <module name="boot-config2" options="-parameters" />
       <module name="boot-helloworld" options="-parameters" />
+      <module name="boot-logging" options="-parameters" />
     </option>
   </component>
 </project>
