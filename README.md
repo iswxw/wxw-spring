@@ -1,8 +1,8 @@
 # Itcast-springboot
 ---
 
-####（1） Spring Boot HelloWorld
-####（2） Spring Boot  配置文件
+#### （1） Spring Boot HelloWorld       
+#### （2） Spring Boot  配置文件
 
    - 配置文件值注入
    - 配置文件占位符
