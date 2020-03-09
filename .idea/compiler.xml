@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-config2" />
+        <module name="boot-web" />
         <module name="Itcast-springboot" />
         <module name="boot-config" />
-        <module name="boot-config2" />
-        <module name="boot-logging" />
         <module name="boot-helloworld" />
+        <module name="boot-logging" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="boot-config2" options="-parameters" />
       <module name="boot-helloworld" options="-parameters" />
       <module name="boot-logging" options="-parameters" />
+      <module name="boot-web" options="-parameters" />
     </option>
   </component>
 </project>
