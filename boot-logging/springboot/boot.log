@@ -1,0 +1,8 @@
+2020-03-09 00:01:00.935  INFO 8300 --- [main] com.wxw.Test.SringBootLogTest            : Starting SringBootLogTest on BEOCP39OXTF28CP with PID 8300 (started by Administrator in F:\idea_doc\springProject\Itcast-springboot\boot-logging)
+2020-03-09 00:01:00.938  INFO 8300 --- [main] com.wxw.Test.SringBootLogTest            : No active profile set, falling back to default profiles: default
+2020-03-09 00:01:05.597  INFO 8300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-09 00:01:06.442  INFO 8300 --- [main] com.wxw.Test.SringBootLogTest            : Started SringBootLogTest in 7.29 seconds (JVM running for 12.436)
+2020-03-09 00:01:06.980  INFO 8300 --- [main] o.s.boot.test.context.SpringBootTest     : 日志提示信息
+2020-03-09 00:01:06.981  WARN 8300 --- [main] o.s.boot.test.context.SpringBootTest     : 日志警告信息
+2020-03-09 00:01:06.982 ERROR 8300 --- [main] o.s.boot.test.context.SpringBootTest     : 日志提示错误信息
+2020-03-09 00:01:07.023  INFO 8300 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

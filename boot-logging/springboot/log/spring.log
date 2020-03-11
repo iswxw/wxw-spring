@@ -1,0 +1,8 @@
+2020-03-08 23:58:31.450  INFO 15980 --- [main] com.wxw.Test.SringBootLogTest            : Starting SringBootLogTest on BEOCP39OXTF28CP with PID 15980 (started by Administrator in F:\idea_doc\springProject\Itcast-springboot\boot-logging)
+2020-03-08 23:58:31.453  INFO 15980 --- [main] com.wxw.Test.SringBootLogTest            : No active profile set, falling back to default profiles: default
+2020-03-08 23:58:37.288  INFO 15980 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-08 23:58:38.390  INFO 15980 --- [main] com.wxw.Test.SringBootLogTest            : Started SringBootLogTest in 9.018 seconds (JVM running for 12.762)
+2020-03-08 23:58:38.995  INFO 15980 --- [main] o.s.boot.test.context.SpringBootTest     : 日志提示信息
+2020-03-08 23:58:38.996  WARN 15980 --- [main] o.s.boot.test.context.SpringBootTest     : 日志警告信息
+2020-03-08 23:58:38.997 ERROR 15980 --- [main] o.s.boot.test.context.SpringBootTest     : 日志提示错误信息
+2020-03-08 23:58:39.037  INFO 15980 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
