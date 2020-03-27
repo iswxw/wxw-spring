@@ -1,0 +1,15 @@
+
+
+# DataSource Config
+spring:
+  application:
+    name: boot-mybatis-plus
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/bootcache?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+server:
+  port: 8001
