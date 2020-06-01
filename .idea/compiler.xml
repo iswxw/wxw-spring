@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="boot-config2" />
         <module name="boot-web" />
-        <module name="Itcast-springboot" />
+        <module name="boot-mybatis-plus" />
         <module name="boot-config" />
         <module name="boot-helloworld" />
         <module name="boot-logging" />
+        <module name="boot-aop" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,6 +23,7 @@
       <module name="boot-config2" options="-parameters" />
       <module name="boot-helloworld" options="-parameters" />
       <module name="boot-logging" options="-parameters" />
+      <module name="boot-mybatis-plus" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>
   </component>
