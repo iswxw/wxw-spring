@@ -1,4 +1,4 @@
-package com.wxw.aop;
+package com.wxw.aop.tools;
 
 import java.lang.annotation.*;
 
@@ -6,5 +6,9 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface SysLog {
-    String value() default "";
+
+     long value() default 0;
+
+    String message() default "";
+
 }

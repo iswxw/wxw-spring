@@ -12,6 +12,7 @@
         <module name="boot-mybatis-plus" />
         <module name="boot-config" />
         <module name="boot-helloworld" />
+        <module name="boot-maven" />
         <module name="boot-logging" />
         <module name="boot-aop" />
       </profile>
@@ -19,10 +20,12 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-aop" options="-parameters" />
       <module name="boot-config" options="-parameters" />
       <module name="boot-config2" options="-parameters" />
       <module name="boot-helloworld" options="-parameters" />
       <module name="boot-logging" options="-parameters" />
+      <module name="boot-maven" options="-parameters" />
       <module name="boot-mybatis-plus" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>

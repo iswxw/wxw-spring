@@ -5,6 +5,7 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
 import com.wxw.domain.SysLogEntity;
+import com.wxw.tools.DateTools;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.aspectj.lang.JoinPoint;
@@ -14,18 +15,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Aspect
-@Component
-public class WebLogAspect {
+//@Aspect
+//@Component
+@Deprecated
+public class ExcelLogAspect {
 
-    private Logger logger = LoggerFactory.getLogger(WebLogAspect.class);
+    private Logger logger = LoggerFactory.getLogger(ExcelLogAspect.class);
 
     public List<SysLogEntity> entityList = new ArrayList<>();
 
@@ -36,13 +38,11 @@ public class WebLogAspect {
     @Pointcut("execution(* com.wxw.service.impl..*.*(..))")
     public void webLog() {
     }
-
     @Before("webLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
         startTime.set(System.currentTimeMillis());
         // 日志记录
-        Signature signature = joinPoint.getSignature();
-        save(signature);
+        save(joinPoint);
         System.out.println("joinPoint = " + "日志记录内容");
     }
 
@@ -53,7 +53,7 @@ public class WebLogAspect {
         String time1 = DateFormatUtils.format(new Date(startTime.get()), DatePattern.NORM_DATETIME_PATTERN);
         // 添加运行时间
         List<SysLogEntity> sysLogEntities = entityList.stream().map(sysLogEntity -> {
-            sysLogEntity.setRunTime(midTime);
+            sysLogEntity.setRunTime((int)(System.currentTimeMillis() - startTime.get()));
             sysLogEntity.setStartTime(time1);
             return sysLogEntity;
         }).collect(Collectors.toList());
@@ -75,6 +75,7 @@ public class WebLogAspect {
         writer.addHeaderAlias("pathName", "全路径");
         writer.addHeaderAlias("className", "类名");
         writer.addHeaderAlias("methodName", "方法名");
+        writer.addHeaderAlias("argsName", "方法参数");
         writer.addHeaderAlias("startTime", "开始执行时间");
         writer.addHeaderAlias("runTime", "运行时间");
         writer.addHeaderAlias("createDate", "创建时间");
@@ -88,19 +89,25 @@ public class WebLogAspect {
     }
 
 
-    private void save(Signature signature1) {
-        // logger.info("ServiceImpl 全路径==>signature ==>{}", signature1.toString());
-        // logger.info("ServiceImpl 方法的实现==>signature ==>{}", signature1.getDeclaringTypeName());
-        // logger.info("ServiceImpl 方法名称==>signature ==>{}", signature1.getName());
+    private void save(JoinPoint joinPoint) {
+        Signature signature1 = joinPoint.getSignature();
+        logger.info("ServiceImpl 全路径==>signature ==>{}",signature1.getClass().getName());
+        logger.info("ServiceImpl 方法的实现==>signature ==>{}", signature1.getDeclaringTypeName());
+        logger.info("ServiceImpl 方法名称==>signature ==>{}", signature1.getName());
+        logger.info("ServiceImpl 方法==>signature ==>{}", joinPoint.getTarget().getClass().getName());
+        logger.info("ServiceImpl 方法==>signature ==>{}", joinPoint.getSourceLocation());
+        logger.info("ServiceImpl 方法==>signature ==>{}", joinPoint.getStaticPart());
         // 获取方法的关键信息，类，包 路径
+
         SysLogEntity sysLogEntity = new SysLogEntity();
         sysLogEntity.setPathName(signature1.toString().split(" ")[1]);
         sysLogEntity.setClassName(signature1.getDeclaringTypeName());
         sysLogEntity.setMethodName(signature1.getName());
+        sysLogEntity.setArgsName(Arrays.toString(joinPoint.getArgs()));
         sysLogEntity.setRunTime(null);
-        sysLogEntity.setCreateDate(LocalDateTime.now());
+        sysLogEntity.setCreateDate(DateTools.getLong2YyyyMmDdHhMmSs(System.currentTimeMillis()));
         entityList.add(sysLogEntity);
-        log.info("sysLogEntity=>{}",sysLogEntity);
+        log.info("sysLogEntity=>{}", sysLogEntity);
     }
 
 }

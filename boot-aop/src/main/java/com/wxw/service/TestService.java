@@ -10,5 +10,5 @@ public interface TestService {
 
     String testPrint();
 
-    String testPrint1();
+    String testPrint1(String name);
 }

@@ -1,6 +1,5 @@
 package com.wxw.controller;
 
-import com.wxw.aop.SysLog;
 import com.wxw.service.TestService;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +35,7 @@ public class AopController {
     @ResponseBody
     public String hello(@RequestParam String name) {
 
-        String print = testService.testPrint1();
+        String print = testService.testPrint1(name);
         return "Hello " + name;
     }
 
