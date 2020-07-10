@@ -16,6 +16,13 @@
     <modules>
         <module>boot-aop</module>
         <module>boot-maven</module>
+        <module>boot-transactional</module>
+        <module>boot-config</module>
+        <module>boot-config2</module>
+        <module>boot-helloworld</module>
+        <module>boot-mybatis-plus</module>
+        <module>boot-web</module>
+        <module>boot-logging</module>
     </modules>
 
 

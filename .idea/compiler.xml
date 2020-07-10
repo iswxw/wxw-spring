@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="boot-config2" />
+        <module name="boot-transactional" />
         <module name="boot-web" />
         <module name="boot-mybatis-plus" />
         <module name="boot-config" />
@@ -27,6 +28,7 @@
       <module name="boot-logging" options="-parameters" />
       <module name="boot-maven" options="-parameters" />
       <module name="boot-mybatis-plus" options="-parameters" />
+      <module name="boot-transactional" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>
   </component>
