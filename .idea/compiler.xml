@@ -8,14 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="boot-config2" />
-        <module name="boot-transactional" />
         <module name="boot-web" />
         <module name="boot-mybatis-plus" />
         <module name="boot-config" />
         <module name="boot-helloworld" />
-        <module name="boot-maven" />
+        <module name="boot-transactional" />
         <module name="boot-logging" />
         <module name="boot-aop" />
+        <module name="boot-maven" />
       </profile>
     </annotationProcessing>
   </component>

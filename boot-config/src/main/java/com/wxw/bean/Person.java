@@ -22,6 +22,7 @@ import java.util.Map;
  * 只有这个组件是容器中的组件，才能容器提供的@ConfigurationProperties功能；
  *  @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取值；
  *
+ *  指定具体的配置文件
  *  @PropertySource(value = {"classpath:person.properties"})
  */
 // 启动JSR303校验 ConfigurationProperties 支持 但是Value()不支持
