@@ -23,6 +23,7 @@
         <module>boot-mybatis-plus</module>
         <module>boot-web</module>
         <module>boot-logging</module>
+        <module>boot-httpclient</module>
     </modules>
 
 
