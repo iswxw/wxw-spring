@@ -1,0 +1,28 @@
+# 测试get请求
+GET http://localhost:8080/get
+Accept: application/json
+
+###   一个请求文件中可以多个请求，使用 ### 隔开
+# Ctrl+J 查看可用实时模板
+
+###
+POST http://localhost:8080/post
+Accept: application/json
+
+###  Dev 开发环境
+GET http://localhost:8080/dev?id=12345
+Authorization: Basic dev-user dev-password
+Content-Type: application/json
+
+{
+  "key": "my-dev-value"
+}
+
+### Prod 生产环境
+GET http://localhost:8080/prod?id=6789
+Authorization: Basic user password
+Content-Type: application/json
+
+{
+  "key": "my-prod-value"
+}
