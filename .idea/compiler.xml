@@ -11,6 +11,7 @@
         <module name="boot-config2" />
         <module name="boot-web" />
         <module name="boot-mybatis-plus" />
+        <module name="boot-tomcat" />
         <module name="boot-config" />
         <module name="boot-helloworld" />
         <module name="boot-transactional" />
@@ -32,6 +33,7 @@
       <module name="boot-maven" options="-parameters" />
       <module name="boot-mybatis-plus" options="-parameters" />
       <module name="boot-spring" options="-parameters" />
+      <module name="boot-tomcat" options="-parameters" />
       <module name="boot-transactional" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>

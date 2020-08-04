@@ -25,6 +25,7 @@
         <module>boot-logging</module>
         <module>boot-httpclient</module>
         <module>boot-spring</module>
+        <module>boot-tomcat</module>
     </modules>
 
 
