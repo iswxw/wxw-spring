@@ -6,7 +6,17 @@
 
     <groupId>com.wxw</groupId>
     <artifactId>Itcast-springboot</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>boot-interceptor</module>
+        <module>boot-web</module>
+        <module>boot-config</module>
+        <module>boot-config2</module>
+        <module>boot-helloworld</module>
+        <module>boot-logging</module>
+        <module>boot-mybatis-plus</module>
+    </modules>
 
 
 </project>
