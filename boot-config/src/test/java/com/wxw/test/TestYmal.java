@@ -37,4 +37,9 @@ public class TestYmal {
         System.out.println("personService = " + personService);
     }
 
+    @Test
+    public void testData1(){
+        System.out.println("person = " + person);
+    }
+
 }

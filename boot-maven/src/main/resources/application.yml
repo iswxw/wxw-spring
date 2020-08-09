@@ -1,0 +1,6 @@
+
+spring:
+  profiles:
+    active: @activatedProperties@
+server:
+  port: 8080

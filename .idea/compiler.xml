@@ -7,21 +7,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-spring" />
         <module name="boot-config2" />
         <module name="boot-web" />
-        <module name="Itcast-springboot" />
+        <module name="boot-mybatis-plus" />
+        <module name="boot-tomcat" />
         <module name="boot-config" />
         <module name="boot-helloworld" />
+        <module name="boot-transactional" />
+        <module name="boot-httpclient" />
         <module name="boot-logging" />
+        <module name="boot-aop" />
+        <module name="boot-maven" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-aop" options="-parameters" />
       <module name="boot-config" options="-parameters" />
       <module name="boot-config2" options="-parameters" />
       <module name="boot-helloworld" options="-parameters" />
+      <module name="boot-httpclient" options="-parameters" />
       <module name="boot-logging" options="-parameters" />
+      <module name="boot-maven" options="-parameters" />
+      <module name="boot-mybatis-plus" options="-parameters" />
+      <module name="boot-spring" options="-parameters" />
+      <module name="boot-tomcat" options="-parameters" />
+      <module name="boot-transactional" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>
   </component>

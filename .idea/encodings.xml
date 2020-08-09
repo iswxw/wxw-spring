@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/boot-aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-aop/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-config/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-config2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-config2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-helloworld" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-helloworld/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-httpclient/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-logging/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-maven/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-mybatis-plus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-tomcat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-transactional/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-web/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
