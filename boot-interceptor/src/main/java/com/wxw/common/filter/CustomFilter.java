@@ -19,11 +19,11 @@ import java.lang.reflect.GenericDeclaration;
 //    @Override
 //    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
 //        long start = System.currentTimeMillis();
+//        System.out.println("======我是Servlet Filter 接口 过滤器:转发也会过滤哦！=======");
 //        System.out.println("start = " + start);
 //        filterChain.doFilter(servletRequest,servletResponse);
 //        System.out.println("end = " + System.currentTimeMillis());
 //        System.out.println("Execute cost="+(System.currentTimeMillis()-start));
-//        System.out.println(" ========================================== ");
 //    }
 //
 //    @Override

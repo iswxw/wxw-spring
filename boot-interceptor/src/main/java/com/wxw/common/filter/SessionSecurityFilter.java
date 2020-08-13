@@ -1,5 +1,8 @@
 package com.wxw.common.filter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -14,14 +17,19 @@ import java.io.IOException;
  * @ Description：Spring 内置的过滤器 排除内部页面跳转过滤，只过滤外部请求
  * @ Version:   v_0.0.1
  */
+@Component
 public class SessionSecurityFilter extends OncePerRequestFilter {
+
+    private static Logger logger = LoggerFactory.getLogger(SessionSecurityFilter.class);
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("我是Spring 内置过滤器");
+        logger.info("======我是Spring 内置过滤器：内部请求不会过滤哦！=======");
         String contextPath = request.getContextPath();
         String requestUri = request.getRequestURI();
-        filterChain.doFilter(request,response);
+        logger.info("contextPath = ", contextPath);
+        logger.info("requestUri = ", requestUri);
+        filterChain.doFilter(request, response);
     }
 }

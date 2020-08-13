@@ -11,7 +11,9 @@ import java.util.Date;
 /**
  * @ Author ：wxw.
  * @ Date ： 10:34 2020/8/13
- * @ Description：请求转发测试类 https://www.cnblogs.com/wwct/articles/12275815.html
+ * @ Description：请求转发测试类
+ *    https://www.cnblogs.com/wwct/articles/12275815.html
+ *    https://www.cnblogs.com/harrychinese/p/SpringBoot_redirect_and_forward.html
  * @ Version:   v_0.0.1
  *  注意请求转发
  *    - 必须使用@Controller而非@RestController
@@ -20,14 +22,15 @@ import java.util.Date;
 @Controller
 public class ForwardController {
 
+    // =====================请求转发========================
     /**
      * 重定向 再转发测试
-     * http://test.wxw.com:8080/redirect
+     * http://test.wxw.com:8080/forward
      * @return
      */
-    @GetMapping("/redirect")
+    @GetMapping("/forward")
     public String demo3() {
-        System.out.println("重定向测试开始");
+        System.out.println("请求转发测试开始");
         return "forward:/success";
     }
 
@@ -38,20 +41,22 @@ public class ForwardController {
      * @return
      */
     @GetMapping("/success")
+    @ResponseBody
     public String demo2() {
         return new Date() + "成功路径测试";
+    }
+
+    // =====================重定向========================
+    @RequestMapping("/BB")
+    public String BB(){
+        System.out.println("我是 BB");
+        return "redirect:/AA";
     }
 
     @RequestMapping("/AA")
     @ResponseBody
     public String AA(){
-        System.out.println("重定向到AA了");
-        return "重定向到AA了，现在时间是："+ LocalDateTime.now();
-    }
-
-
-    @RequestMapping("/BB")
-    public String BB(){
-        return "redirect:/AA";
+        System.out.println("我是 AA");
+        return "从BB重定向到AA了，现在时间是："+ LocalDateTime.now();
     }
 }
