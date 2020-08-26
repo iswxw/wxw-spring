@@ -35,13 +35,11 @@ public class TestController {
                 file.createNewFile();
             }
             String absolutePath = file.getAbsolutePath();
-            /**
-             * 可以在tomcat或 nginx 指定工作目录
-             * 文件绝对路径：E:\xkw2020_doc\upload\wxw.txt
-             */
             logger.info("文件绝对路径：{}",absolutePath);
             OutputStream outputStream = new FileOutputStream(absolutePath);
-
+             /**
+             * 可以在tomcat或 nginx 指定工作目录 文件绝对路径
+             */
             // 设置信息给客户端不解析
             response.setContentType("application/force-download"); //应用程序强制下载
             response.addHeader("Content-type", "application/octet-stream"); // .*（ 二进制流，不知道下载文件类型）
