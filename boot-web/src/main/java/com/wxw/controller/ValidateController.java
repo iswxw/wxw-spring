@@ -37,9 +37,35 @@ public class ValidateController {
         return map;
     }
 
+    /**
+     * 入参 K-V
+     *   1. null || 不传  提示 "message": "你好"
+     *   2. name:        提示 正常，但是V 没有值
+     *   3. name:null    提示 正常，V = null
+     * @param name
+     * @return
+     */
     @GetMapping("/test1")
-    public String testData1(@Valid @RequestParam(value="name",required = false) @NotNull(message = "你好") String name){
-         return "我若成佛，天下五魔；我若成魔，佛奈我何！";
+    public String testData1(@RequestParam(value="name",required = false) @NotNull(message = "你好") String name){
+         return "我若成佛，天下五魔；我若成魔，佛奈我何！"+ name;
+    }
+
+    /**
+     * 入参 K-V
+     *   1. null || 不传  提示 "message": "参数name值不能为空"
+     *   2. name:        提示 正常，但是V 没有值
+     *   3. name:null    提示 正常，V = null
+     * @param name
+     * @return
+     */
+    @GetMapping("/test0")
+    public String testData(@RequestParam(value="name",required = true) @NotNull(message = "你好") String name){
+        return "我若成佛，天下五魔；我若成魔，佛奈我何！"+ name;
+    }
+
+    @GetMapping("/test-1")
+    public String testData0(@RequestParam(value="name",required = true) @NotNull(message = "你好") Integer name){
+        return "我若成佛，天下五魔；我若成魔，佛奈我何！"+ name;
     }
 
 }
