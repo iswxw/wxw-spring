@@ -11,13 +11,13 @@
         <module name="boot-config2" />
         <module name="boot-web" />
         <module name="boot-mybatis-plus" />
+        <module name="boot-tomcat" />
         <module name="boot-httpclient" />
         <module name="boot-helloworld" />
         <module name="boot-transactional" />
-        <module name="boot-config" />
         <module name="boot-interceptor" />
         <module name="boot-logging" />
-        <module name="boot-tomcat" />
+        <module name="boot-config" />
         <module name="boot-aop" />
         <module name="boot-maven" />
       </profile>

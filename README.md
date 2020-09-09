@@ -17,6 +17,7 @@
 #### （4）Spring Boot与Web开发
 
    - [webJars官网](https://www.webjars.org/)  
+   - spring-boot-starter-validation 参数校验
    
 #### （5）Spring Boot与Mybatis-plus
    - [mybatis-plus](https://mp.baomidou.com/)   
@@ -27,7 +28,6 @@
 #### (7) Spring Boot 与 httpclient的使用
    - [boot-httpclient](https://blog.csdn.net/qq_28038487/article/details/104614546) 
    
-      
    
      
 
