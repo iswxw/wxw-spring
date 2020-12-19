@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9598ed06-f6da-4887-961a-0f5b259d18d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/boot-config/src/main/java/com/wxw/bean/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-config/src/main/java/com/wxw/bean/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot-config/src/main/java/com/wxw/bean/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/boot-config/src/main/java/com/wxw/bean/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +84,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/boot-web/src/main/resources/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -384,7 +384,7 @@
       <workItem from="1597241423683" duration="679000" />
       <workItem from="1601732785315" duration="858000" />
       <workItem from="1603472185930" duration="38000" />
-      <workItem from="1608389564053" duration="3182000" />
+      <workItem from="1608389564053" duration="3814000" />
     </task>
     <task id="LOCAL-00001" summary="刚创建boot">
       <created>1583296450473</created>
@@ -498,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596987263978</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="过滤器、拦截器、监听器">
+      <created>1608394023340</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608394023340</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,29 +521,54 @@
     <MESSAGE value="使用模板引擎" />
     <MESSAGE value="mybatis-plus的使用" />
     <MESSAGE value="过滤器、拦截器、监听器" />
-    <option name="LAST_COMMIT_MESSAGE" value="过滤器、拦截器、监听器" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/encodings.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/encodings.xml" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="311" key="GridCell.Tab.0.bottom" timestamp="1608393616691">
+    <state x="516" y="217" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608394534765">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="311" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608393616691" />
-    <state width="1493" height="311" key="GridCell.Tab.0.center" timestamp="1608393616690">
+    <state x="516" y="217" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1608394534765" />
+    <state x="72" y="0" key="CommitChangelistDialog2" timestamp="1608394591149">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="311" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608393616690" />
-    <state width="1493" height="311" key="GridCell.Tab.0.left" timestamp="1608393616690">
+    <state x="72" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1608394591149" />
+    <state width="490" height="506" key="Git.Branch.Popup" timestamp="1608394600049">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="311" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608393616690" />
-    <state width="1493" height="311" key="GridCell.Tab.0.right" timestamp="1608393616691">
+    <state width="490" height="506" key="Git.Branch.Popup/0.0.1536.834@0.0.1536.834" timestamp="1608394600049" />
+    <state width="1493" height="311" key="GridCell.Tab.0.bottom" timestamp="1608394083156">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="311" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608393616691" />
+    <state width="1493" height="311" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608394083156" />
+    <state width="1493" height="311" key="GridCell.Tab.0.center" timestamp="1608394083156">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="311" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608394083156" />
+    <state width="1493" height="311" key="GridCell.Tab.0.left" timestamp="1608394083156">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="311" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608394083156" />
+    <state width="1493" height="311" key="GridCell.Tab.0.right" timestamp="1608394083156">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="311" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608394083156" />
     <state x="270" y="61" key="SettingsEditor" timestamp="1603472221614">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="270" y="61" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1603472221614" />
+    <state x="536" y="132" key="VCS.ChangeListViewerDialog" timestamp="1608394077170">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="536" y="132" key="VCS.ChangeListViewerDialog/0.0.1536.834@0.0.1536.834" timestamp="1608394077170" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1608394614293">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1608394614293" />
+    <state x="574" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608394465740">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1608394465740" />
   </component>
   <component name="masterDetails">
     <states>
