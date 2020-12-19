@@ -7,11 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  *  测试配置文件占位符
  */
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class Dog {
 
     private String dogName;
