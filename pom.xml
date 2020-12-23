@@ -27,6 +27,8 @@
         <module>boot-spring</module>
         <module>boot-tomcat</module>
         <module>boot-interceptor</module>
+        <module>boot-starter</module>
+        <module>boot-use-starter</module>
     </modules>
 
 
