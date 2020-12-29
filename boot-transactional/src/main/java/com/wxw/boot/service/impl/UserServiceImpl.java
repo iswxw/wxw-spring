@@ -4,6 +4,7 @@ import com.wxw.boot.domain.User;
 import com.wxw.boot.repository.UserRepository;
 import com.wxw.boot.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -30,6 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public User update(String name, String password) {
         return userRepository.findUser(name);
     }

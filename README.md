@@ -18,6 +18,7 @@
 - Spring Boot 与 httpclient的使用
 - Spring Boot 与  Maven
 - Spring Boot 与  Tomcat
+- Spring Boot 与 Transactional
 - Spring Boot 与 自定义 Stater
 - Spring Boot 与 使用自定义的 stater
 - Spring Boot 与 AOP
