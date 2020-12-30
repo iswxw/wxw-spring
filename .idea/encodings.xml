@@ -24,10 +24,12 @@
     <file url="file://$PROJECT_DIR$/boot-mybatis-plus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-spring" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-spring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-tomcat" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-tomcat/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-transactional" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-transactional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boot-use-starter/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/boot-web/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
