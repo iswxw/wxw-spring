@@ -3,9 +3,31 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9598ed06-f6da-4887-961a-0f5b259d18d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="9598ed06-f6da-4887-961a-0f5b259d18d9" name="Default Changelist" comment="设置文件">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +73,16 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="test" />
+      </list>
+    </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="dev" />
+      </list>
+    </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
@@ -61,7 +93,9 @@
     <option name="height" value="1090" />
   </component>
   <component name="ProjectId" id="1jHs5fh5l6EBgmI8c4ZdCIF34jE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollFromSource" value="true" />
@@ -91,9 +125,18 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\resources" />
+      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\public" />
+      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\templates" />
+      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-logging\src\main\resources\log" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.wxw.test" />
       <recent name="com.wxw" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.wxw.bean" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\public" />
@@ -101,15 +144,6 @@
       <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-logging\src\main\resources" />
       <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-config2" />
       <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-config2\src\main\resources\config" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.wxw.bean" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\resources" />
-      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\public" />
-      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-web\src\main\resources\templates" />
-      <recent name="F:\idea_doc\springProject\Itcast-springboot\boot-logging\src\main\resources\log" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -120,17 +154,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.TestProperties">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BootMybatisPlusApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="boot-mybatis-plus" />
       <extension name="coverage">
@@ -326,6 +349,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.BootMybatisPlusApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.TestPlus.testSelect" />
+      <item itemvalue="JUnit.TestProperties" />
+      <item itemvalue="JUnit.TestProperties.TestOrderOne" />
+      <item itemvalue="Spring Boot.BootWebApplication" />
+      <item itemvalue="Spring Boot.BootConfig2Application" />
+      <item itemvalue="Spring Boot.BootConfigApplication" />
+      <item itemvalue="Spring Boot.BootHelloworldApplication" />
+      <item itemvalue="Spring Boot.BootLoggingApplication" />
+      <item itemvalue="Spring Boot.BootMybatisPlusApplication" />
+      <item itemvalue="Spring Boot.TransactionalMain" />
+      <item itemvalue="Spring Boot.HttpClientMain" />
+      <item itemvalue="Spring Boot.InterceptorMain" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestProperties" />
@@ -336,7 +374,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SpringBootOptions">
     <option name="showAdditionalConfigNotification" value="false" />
   </component>
@@ -511,6 +549,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="刚创建boot" />
     <MESSAGE value="springboot 静态资源文件的自定义配置、以及注解的使用说明" />
@@ -533,10 +574,11 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="72" y="0" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1608394591149" />
-    <state width="490" height="506" key="Git.Branch.Popup" timestamp="1608394600049">
-      <screen x="0" y="0" width="1536" height="834" />
+    <state width="615" height="633" key="Git.Branch.Popup" timestamp="1609293099152">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="490" height="506" key="Git.Branch.Popup/0.0.1536.834@0.0.1536.834" timestamp="1608394600049" />
+    <state width="615" height="633" key="Git.Branch.Popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609293099152" />
     <state width="1493" height="311" key="GridCell.Tab.0.bottom" timestamp="1608394083156">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -569,6 +611,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1608394465740" />
+    <state x="727" y="232" key="git4idea.branch.GitSmartOperationDialog" timestamp="1609293103597">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="727" y="232" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609293103597" />
   </component>
   <component name="masterDetails">
     <states>

@@ -1,3 +1,10 @@
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+.idea/*
+
 */logs/
 logs/
 /target/
@@ -14,12 +21,6 @@ logs/
 .sts4-cache
 .settings
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-*.iml
 
 ### NetBeans ###
 /nbproject/private/
