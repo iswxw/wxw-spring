@@ -1,9 +1,6 @@
 package com.wxw.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Date;
 
@@ -17,19 +14,35 @@ import java.util.Date;
 @RequestMapping("/interceptor")
 public class TestController {
 
+
     /**
+     * 成功路径测试
+     * http://test.wxw.com:8080/interceptor/success
+     * @return
+     */
+    @GetMapping("/success")
+    public Object demo2(){
+
+        return new Date()+"成功路径测试";
+    }
+
+    /**
+     * 统一异常处理拦截测试
      * http://test.wxw.com:8080/interceptor/demo1
      * @return
      */
     @GetMapping("/demo1")
     public Object demo1(){
         int i = 1 / 0;
-        return new Date();
+        return new Date()+"统一异常处理拦截测试";
     }
+
     // 统一处理异常 方式一
 //    @ExceptionHandler({RuntimeException.class})
 //    public String fix(Exception ex){
 //        System.out.println(ex);
 //        return "网络不给力,请稍后重试!";
 //    }
+
+
 }

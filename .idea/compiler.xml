@@ -7,21 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-spring" />
         <module name="boot-config2" />
-        <module name="boot-config" />
-        <module name="boot-maven" />
-        <module name="boot-use-starter" />
-        <module name="boot-tomcat" />
-        <module name="boot-helloworld" />
-        <module name="boot-aop" />
-        <module name="boot-starter" />
-        <module name="boot-httpclient" />
-        <module name="boot-interceptor" />
-        <module name="boot-transactional" />
-        <module name="boot-logging" />
         <module name="boot-web" />
         <module name="boot-mybatis-plus" />
-        <module name="boot-spring" />
+        <module name="boot-httpclient" />
+        <module name="boot-helloworld" />
+        <module name="boot-transactional" />
+        <module name="boot-config" />
+        <module name="boot-interceptor" />
+        <module name="boot-logging" />
+        <module name="boot-tomcat" />
+        <module name="boot-config" />
+        <module name="boot-aop" />
+        <module name="boot-maven" />
       </profile>
     </annotationProcessing>
   </component>
@@ -37,10 +36,8 @@
       <module name="boot-maven" options="-parameters" />
       <module name="boot-mybatis-plus" options="-parameters" />
       <module name="boot-spring" options="-parameters" />
-      <module name="boot-starter" options="-parameters" />
       <module name="boot-tomcat" options="-parameters" />
       <module name="boot-transactional" options="-parameters" />
-      <module name="boot-use-starter" options="-parameters" />
       <module name="boot-web" options="-parameters" />
     </option>
   </component>

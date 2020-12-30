@@ -24,6 +24,13 @@ import java.util.Map;
  *
  *  指定具体的配置文件
  *  @PropertySource(value = {"classpath:person.properties"})
+ *
+ * 解释：
+ *     @ConfigurationProperties 表示 告诉 SpringBoot 将本类中的所有属性和配置文件中相关的配置进行绑定
+ *     prefix = "person" 表示 将配置文件中 key 为 user 的下面所有的属性与本类属性进行一一映射注入值，如果配置文件中，不存在 "user" 的 key，则不会为 POJO 注入值，属性值仍然为默认值
+ *     @Component 将本来标识为一个 Spring 组件，因为只有是容器中的组件，容器才会为 @ConfigurationProperties 提供此注入功能
+ *     @PropertySource (value = { " classpath : user.properties " }) 指明加载类路径下的哪个配置文件来注入值
+ *
  */
 // 启动JSR303校验 ConfigurationProperties 支持 但是Value()不支持
 //@Validated
