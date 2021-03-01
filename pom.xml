@@ -29,6 +29,7 @@
         <module>boot-interceptor</module>
         <module>boot-starter</module>
         <module>boot-use-starter</module>
+        <module>boot-cache</module>
     </modules>
 
 
