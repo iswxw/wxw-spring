@@ -24,11 +24,11 @@ debug：当此属性设置为true时，将打印出logback内部日志信息，�
             <!--多环境profile 配置-->
             <springProfile name="dev">
                 <!-- configuration to be enabled when the "production" profile is not active -->
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}----->[%thread] %-5level %logger{50} --> %msg%n</pattern>
+                <pattern>[%X{traceId}] %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-4level %C{50}:%L %msg%n</pattern>
             </springProfile>
             <springProfile name="!dev">
                 <!-- configuration to be enabled when the "production" profile is not active -->
-                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}=====> [%thread] %-5level %logger{50}==>%msg%n</pattern>
+                <pattern>[%X{traceId}] %d{HH:mm:ss.SSS} [%thread] %-4level %C{50}:%L %msg%n</pattern>
             </springProfile>
         </layout>
     </appender>

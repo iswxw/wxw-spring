@@ -1,9 +1,7 @@
 package com.wxw;
 
-import com.wxw.bean.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 /**
  * @EnableConfigurationProperties(Person.class)  可以使得 @ConfigurationProperties： 生效

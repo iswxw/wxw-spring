@@ -2,7 +2,6 @@ package com.wxw;
 
 import com.wxw.domain.Employee;
 import com.wxw.mapper.EmployeeMapper;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,7 +17,6 @@ public class TestPlus {
     @Autowired
     private EmployeeMapper employeeMapper;
 
-    @Test
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
         List<Employee> userList = employeeMapper.selectList(null);

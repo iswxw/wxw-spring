@@ -8,7 +8,7 @@ package com.wxw.service;
  */
 public interface TestService {
 
-    String testPrint();
+    String testPrint(String name, int age);
 
     String testPrint1(String name);
 }

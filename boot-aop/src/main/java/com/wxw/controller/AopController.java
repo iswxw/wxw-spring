@@ -19,11 +19,10 @@ public class AopController {
      * @param age
      * @return
      */
-   // @SysLog("测试")
     @GetMapping("/test")
     public String test(@RequestParam("name") String name, @RequestParam("age") int age){
-        String print = testService.testPrint();
-        return name + ", " + age+":"+print;
+        String result = testService.testPrint(name,age);
+        return name + ", " + age+":"+result;
     }
 
     /**
@@ -31,12 +30,10 @@ public class AopController {
      * @param name
      * @return
      */
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    @ResponseBody
+    @GetMapping("/hello")
     public String hello(@RequestParam String name) {
-
-        String print = testService.testPrint1(name);
-        return "Hello " + name;
+        String result = testService.testPrint1(name);
+        return "Hello " + result;
     }
 
 }

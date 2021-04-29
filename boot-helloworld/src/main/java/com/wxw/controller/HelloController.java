@@ -15,7 +15,6 @@ public class  HelloController{
     @ResponseBody
     @RequestMapping("/hello")
     public String hello(){
-        String threadName = Thread.currentThread().getName();
-        return threadName;
+        return "Hello World!";
     }
 }

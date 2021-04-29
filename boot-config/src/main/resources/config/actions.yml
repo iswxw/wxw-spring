@@ -1,0 +1,7 @@
+actions:
+  actionList:
+    - interactive_open: 互动题开始推送
+      interactive_close: 互动题退出
+    # 红包
+    - redbag_open: 开始抢红包
+      redbag_close: 抢红包结束

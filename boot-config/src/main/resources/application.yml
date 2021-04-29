@@ -6,7 +6,10 @@ person:
   age: 18
   gender: true
   birth: 2020/03/07
-  maps: {k1: v1,k2: 12}
+  maps: {
+    k1: v1,
+    k2: 12
+  }
   lists:
     - 郭婷
     - 连李文

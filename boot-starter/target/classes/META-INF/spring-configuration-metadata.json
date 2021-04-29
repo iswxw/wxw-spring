@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "demo",
+      "type": "com.wxw.config.DemoProperties",
+      "sourceType": "com.wxw.config.DemoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "demo.say-what",
+      "type": "java.lang.String",
+      "sourceType": "com.wxw.config.DemoProperties"
+    },
+    {
+      "name": "demo.to-who",
+      "type": "java.lang.String",
+      "sourceType": "com.wxw.config.DemoProperties"
+    }
+  ],
+  "hints": []
+}
