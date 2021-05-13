@@ -1,0 +1,4 @@
+
+mybatis-plus
+ - 官方资料：https://mp.baomidou.com/guide
+ - 多数据源配置：https://mp.baomidou.com/guide/dynamic-datasource.html

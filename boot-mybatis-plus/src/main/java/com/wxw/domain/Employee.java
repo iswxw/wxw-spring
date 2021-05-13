@@ -1,25 +1,34 @@
 package com.wxw.domain;
 
+import java.io.Serializable;
 import lombok.Data;
 
 /**
- * @Author: wxw
- * @create: 2020-03-27-12:23
+ * employee
+ * @author 
  */
 @Data
-public class Employee {
+public class Employee implements Serializable {
 
-    private Long id;
-    private String lastName;
-    private String email;
-    private String gender;
-    private Long d_id;
+    private static final long serialVersionUID = 1L;
 
-    public Employee(Long id, String lastName, String email, String gender) {
-        this.id = id;
-        this.lastName = lastName;
-        this.email = email;
-        this.gender = gender;
-    }
+    /**
+     * 员工编号
+     */
+    private Long employeeId;
 
+    /**
+     * 员工名称
+     */
+    private String employeeName;
+
+    /**
+     * 员工邮箱
+     */
+    private String employeeEmail;
+
+    /**
+     * 备注信息
+     */
+    private String employeeRemark;
 }

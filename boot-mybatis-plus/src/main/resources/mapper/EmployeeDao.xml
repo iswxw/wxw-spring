@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxw.dao.EmployeeDao">
+  <resultMap id="BaseResultMap" type="com.wxw.domain.Employee">
+    <result column="employeeId" jdbcType="BIGINT" property="employeeId" />
+    <result column="employeeName" jdbcType="VARCHAR" property="employeeName" />
+    <result column="employeeEmail" jdbcType="VARCHAR" property="employeeEmail" />
+    <result column="employeeRemark" jdbcType="VARCHAR" property="employeeRemark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.wxw.domain.Employee">
+    insert into employee (employeeId, employeeName, employeeEmail, 
+      employeeRemark)
+    values (#{employeeId,jdbcType=BIGINT}, #{employeeName,jdbcType=VARCHAR}, #{employeeEmail,jdbcType=VARCHAR}, 
+      #{employeeRemark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wxw.domain.Employee">
+    insert into employee
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="employeeId != null">
+        employeeId,
+      </if>
+      <if test="employeeName != null">
+        employeeName,
+      </if>
+      <if test="employeeEmail != null">
+        employeeEmail,
+      </if>
+      <if test="employeeRemark != null">
+        employeeRemark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="employeeId != null">
+        #{employeeId,jdbcType=BIGINT},
+      </if>
+      <if test="employeeName != null">
+        #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeEmail != null">
+        #{employeeEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeRemark != null">
+        #{employeeRemark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+    <select id="selectList" resultType="com.wxw.domain.Employee">
+      select * from employee;
+    </select>
+</mapper>
