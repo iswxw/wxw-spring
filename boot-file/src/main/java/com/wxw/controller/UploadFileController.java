@@ -20,18 +20,21 @@ public class UploadFileController {
 
     /**
      * 单文件上传
+     * localhost:8081/file/upload/one-file-1
+     * @param file 上传文件会自动绑定到MultipartFile中
      */
-    @PostMapping("/upload")
-    @ResponseBody
+    @PostMapping("/one-file-1")
     public String upload(@RequestParam("file") MultipartFile file) {
         if (file.isEmpty()) {
             return "上传之前，请先选择文件";
         }
+        // 上传文件名
         String fileName = file.getOriginalFilename();
-        String filePath = "/Users/mac/IdeaProjects/wxw/Itcast-springboot/boot-file/document/upload/";
-        File dest = new File(filePath + fileName);
+        // 上传文件路径
+        String filePath = System.getProperty("user.dir") + "/document/upload/";
+        File dest = new File(filePath + File.separator + fileName);
         try {
-            // transferTo 传入参数 定义为绝对路径
+            // 将上传文件保存到一个目标文件当中
             file.transferTo(dest);
             return "上传成功";
         } catch (IOException e) {
