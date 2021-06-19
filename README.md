@@ -18,6 +18,7 @@ springboot 用法和与各种框架、组件等结合使用，包括springboot�
 - [Spring Boot 与 Mybatis-plus](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-mybatis-plus) 
 - [Spring Boot 与 事务](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-transactional) 
 - [Spring Boot 与 httpclient](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-httpclient) 
+- [Spring Boot与Spring](https://github.com/GitHubWxw/Itcast-springboot/tree/dev-wxw/boot-spring) 
 - [Spring Boot 与  Maven](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-maven) 
 - [Spring Boot 与  Tomcat](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-tomcat) 
 - [Spring Boot 与 自定义 Stater](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-starter) 
@@ -25,5 +26,9 @@ springboot 用法和与各种框架、组件等结合使用，包括springboot�
 - [Spring Boot 与 AOP](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-aop) 
 - [Spring Boot 与 文件（上传、下载）](https://gitee.com/wwxw/Itcast-springboot/tree/dev-wxw/boot-file) 
 
- 
+---
 
+### 1. Boot-Spring
+
+- 统一设置Json数据返回风格（Java驼峰命名转下划线）
+- Java如何优雅地实现接口数据校验

@@ -1,1 +1,2 @@
 1. Spring Boot 统一设置Json数据返回风格（Java驼峰命名转下划线）(https://blog.csdn.net/limenghua9112/article/details/84976621)
+2. 优雅校验请求参数

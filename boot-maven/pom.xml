@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>boot-maven</artifactId>
-     <!--版本管理-->
+    <!--版本管理-->
     <dependencies>
         <!--启动器-->
         <dependency>
@@ -48,6 +48,20 @@
             </activation>
             <properties>
                 <activatedProperties>dev</activatedProperties>
+                <build.profile.id>dev</build.profile.id>
+                <!--Only unit tests are run when the development profile is active-->
+                <skip.integration.tests>true</skip.integration.tests>
+                <skip.unit.tests>false</skip.unit.tests>
+            </properties>
+        </profile>
+        <!-- The Configuration of the integration-test profile -->
+        <profile>
+            <id>integration-test</id>
+            <properties>
+                <build.profile.id>integration-test</build.profile.id>
+                <!--Only integration tests are run when the integration-test profile is active-->
+                <skip.integration.tests>false</skip.integration.tests>
+                <skip.unit.tests>true</skip.unit.tests>
             </properties>
         </profile>
         <profile>
@@ -65,6 +79,8 @@
             </properties>
         </profile>
     </profiles>
+
+
     <properties>
         <!--默认有冲突，自定义符号-->
         <resource.delimiter>@</resource.delimiter>
