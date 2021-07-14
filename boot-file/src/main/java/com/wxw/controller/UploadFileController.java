@@ -3,11 +3,13 @@ package com.wxw.controller;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
+import java.io.*;
 
 /**
  * @author weixiaowei
@@ -52,4 +54,37 @@ public class UploadFileController {
         return "上传成功";
     }
 
+    @PostMapping("/one-file-2")
+    public ResponseEntity<String> upload(InputStream inputStream) throws IOException {
+        log.info(" 开始接收 file = {}",inputStream);
+        String filePath = "./a.gzip";
+        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+        IOUtils.copy(inputStream,fileOutputStream);
+        fileOutputStream.flush();
+        fileOutputStream.close();
+        byte[] header = new byte[]{};
+        modifyFileHeader(header,filePath);
+
+        return ResponseEntity.ok("成功");
+    }
+
+
+    public static void modifyFileHeader(byte[] header, String filePath) {
+        if (header.length == 2) {
+            try (RandomAccessFile src = new RandomAccessFile(filePath, "rw")) {
+                int srcLength = (int)src.length();
+                // 略过前两个字节
+                src.skipBytes(2);
+                byte[] buff = new byte[srcLength - 2];
+                // 读取除前两个字节之后的字节
+                src.read(buff);
+                src.seek(0);
+                src.write(header);
+                src.seek(header.length);
+                src.write(buff);
+            } catch (Exception e) {
+                log.error("修改文件{}的前两个字节失败!", filePath);
+            }
+        }
+    }
 }
