@@ -1,6 +1,8 @@
 package com.wxw.controller;
 
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,9 +22,12 @@ public class UploadFileController {
 
     /**
      * 单文件上传
-     * localhost:8081/file/upload/one-file-1
+     * curl --form file=@/Users/mac/Documents/document/docs/ttt_20210714_110342 --form press=OK localhost:8082/file/upload/one-file-1
+     * curl -X POST localhost:8082/file/upload/one-file-1
+     *
      * @param file 上传文件会自动绑定到MultipartFile中
      */
+    @SneakyThrows
     @PostMapping("/one-file-1")
     public String upload(@RequestParam("file") MultipartFile file) {
         if (file.isEmpty()) {
@@ -31,16 +36,20 @@ public class UploadFileController {
         // 上传文件名
         String fileName = file.getOriginalFilename();
         // 上传文件路径
-        String filePath = System.getProperty("user.dir") + "/document/upload/";
+        String filePath = System.getProperty("user.dir") + "/boot-file/document/upload/";
         File dest = new File(filePath + File.separator + fileName);
+        if (!dest.exists()) {
+            FileUtils.forceMkdirParent(dest);
+        }
         try {
             // 将上传文件保存到一个目标文件当中
             file.transferTo(dest);
-            return "上传成功";
         } catch (IOException e) {
             log.error(e.toString(), e);
+            return "上传失败！";
         }
-        return "上传失败！";
+        log.info("dest = {}",dest.getAbsolutePath());
+        return "上传成功";
     }
 
 }
