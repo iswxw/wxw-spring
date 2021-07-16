@@ -1,10 +1,14 @@
 package com.wxw.controller;
 
+import cn.hutool.core.io.IoUtil;
+import cn.hutool.core.util.ZipUtil;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -57,34 +61,16 @@ public class UploadFileController {
     @PostMapping("/one-file-2")
     public ResponseEntity<String> upload(InputStream inputStream) throws IOException {
         log.info(" 开始接收 file = {}",inputStream);
-        String filePath = "./a.gzip";
-        FileOutputStream fileOutputStream = new FileOutputStream(filePath);
-        IOUtils.copy(inputStream,fileOutputStream);
-        fileOutputStream.flush();
-        fileOutputStream.close();
-        byte[] header = new byte[]{};
-        modifyFileHeader(header,filePath);
+        byte[] readBytes = FileCopyUtils.copyToByteArray(inputStream);
+        readBytes[0]=(byte) 0x1f;
+        readBytes[1]=(byte) 0x8b;
+        byte[] unGzipFile = ZipUtil.unGzip(IoUtil.toStream(readBytes));
+        OutputStream outputStream = new FileOutputStream("./m.txt");
+        outputStream.write(unGzipFile);
+        outputStream.flush();
+        outputStream.close();
 
         return ResponseEntity.ok("成功");
     }
 
-
-    public static void modifyFileHeader(byte[] header, String filePath) {
-        if (header.length == 2) {
-            try (RandomAccessFile src = new RandomAccessFile(filePath, "rw")) {
-                int srcLength = (int)src.length();
-                // 略过前两个字节
-                src.skipBytes(2);
-                byte[] buff = new byte[srcLength - 2];
-                // 读取除前两个字节之后的字节
-                src.read(buff);
-                src.seek(0);
-                src.write(header);
-                src.seek(header.length);
-                src.write(buff);
-            } catch (Exception e) {
-                log.error("修改文件{}的前两个字节失败!", filePath);
-            }
-        }
-    }
 }
