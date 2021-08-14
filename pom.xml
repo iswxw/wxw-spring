@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.wxw</groupId>
-    <artifactId>Itcast-springboot</artifactId>
+    <artifactId>wxw-spring</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <properties>
