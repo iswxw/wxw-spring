@@ -4,15 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @ Author ：wxw.
- * @ Date ： 8:25 2020/7/27
- * @ Description：Spring 启动类
- *
- * @ Version:   v_0.0.1
+ * @contract: 公众号：Java半颗糖
+ * @desc:
+ * @link:
  */
 @SpringBootApplication
-public class SpringMain {
+public class UseStarterApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringMain.class, args);
+        SpringApplication.run(UseStarterApplication.class,args);
     }
 }

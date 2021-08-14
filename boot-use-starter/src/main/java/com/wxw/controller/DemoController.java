@@ -1,4 +1,4 @@
-package com.wxw;
+package com.wxw.controller;
 
 import com.wxw.service.DemoService;
 import org.springframework.web.bind.annotation.GetMapping;
